@@ -1,0 +1,693 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+  
+html{
+    overflow-x:hidden ;
+}
+.hero{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)) , url('banner.png');
+    width:100%;
+    height:100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+}
+.nav{
+    padding: 2% 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav img{
+    width:150px;
+    height:50px
+}
+.list{
+    flex:1;
+    text-align: right;
+}
+.nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    margin:2px 10px;
+    position: relative;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+.nav ul li a::after{
+    content:'';
+    width:0;
+    margin-top: 1px;
+    height:2px;
+    background:#f44336;
+    display: block;
+    transition: all 0.5s;
+}
+.nav ul li a:hover::after{
+    width:100%
+}
+.content{
+    text-align: center;
+    color:white;
+    width: 80%;
+    margin: 0 auto;
+    margin-top:140px;
+   
+}
+.list i,.nav i{
+    display: none;
+}
+.content h1{
+    font-size: 62px;
+    margin-bottom: 25px ;
+}
+.content p{
+    font-size: 14px;
+    margin: 20px 0;
+    line-height: 19px;
+}
+.content button{
+   padding: 11px 20px;
+   background: transparent;
+   border: 1px solid white;
+   color:white;
+   position: relative;
+   transition: all 0.5s ;
+}
+.content button:hover{
+    background-color:#f44336;
+    cursor: pointer;
+    border: none;
+}
+@media (max-width:700px){
+    .content h1{
+        font-size: 23.2px;
+    }
+    .content p{
+        font-size: 13px;
+    }
+    .nav img{
+        width:110px;
+        height:40px
+    }
+    .nav ul li{
+        display: block;
+    }
+    .list  {
+        background-color: #f44336;
+        min-height: 100vh;
+        text-align: left;
+        width:200px;
+        position: absolute;
+        top:0;
+        right:0;
+        border: none;
+        z-index: 1;
+        transition: all 0.5s;
+        overflow-x: hidden;
+    }
+    .list ul li{
+        margin-bottom: 10px;
+    }
+    .list i, .nav i{
+         display: block;
+         font-size:20px;
+          margin:6% 7%;
+         color:white;
+         cursor: pointer;
+         font-weight: bold;
+    }
+}
+/* Courses */
+.courses{
+    overflow-x: hidden;
+}
+.header{
+    text-align: center;
+    color: black;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.header h1{
+    margin-bottom: 10px;
+}
+.header p{
+    color:#777;
+}
+.row{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top:20px ;
+}
+.col{
+    flex-basis: 24%;
+    min-height:170px;
+    background-color: #fff3f3;
+    margin: 15px;
+    border-radius: 10px;
+    padding: 25px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.col h3{
+    margin-bottom: 20px;
+}
+.col p{
+    color:#777;
+    line-height: 22px;
+    font-size: 13px;
+}
+@media (max-width:700px){
+    .row{
+       flex-direction: column;
+    }
+    .header p{
+        font-size: 14px;
+    }
+}
+/* Global Campus Section */
+.global-campus{
+    margin-top: 100px;
+    overflow-x: hidden;
+}
+.global-campus h1{
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+}
+.global-campus p{
+    color:#777;
+    text-align: center;
+}
+.campus-row{
+    display: flex;
+    margin: 50px 20px;
+    justify-content: center;
+}
+.campus-col{
+    flex-basis:26%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px;
+    position: relative;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0%;
+    text-align: center;
+}
+.layer:hover{
+    background: rgba(226, 0, 0, 0.7);
+}
+.layer h3{
+    color:white;
+    font-weight: 500;
+    position: absolute;
+    bottom: 0;
+    left:37%;
+    transition: all 0.5s;
+    opacity: 0;
+}
+.layer:hover h3{
+    bottom:50%;
+    opacity: 1;
+}
+@media (max-width:700px){
+    .campus-row{
+       flex-direction: column;
+    }
+    .campus-header p{
+        font-size: 14px;
+    }
+}
+
+.facilities{
+    overflow-x: hidden;
+}
+.facilities-header{
+    text-align: center;
+    margin-top: 50px;
+}
+.facilities-header h1{
+    margin-bottom: 10px;
+}
+.facilities-row{
+    display: flex;
+    justify-content: center;
+    margin-top:50px;
+    padding: 10px 20px;
+}
+.facilities-header p{
+    color:#777
+}
+.facilities-col{
+   flex-basis: 27%;
+   margin:10px 15px;
+   min-height:400px;
+  overflow: hidden;
+}
+.facilities-col img{
+   max-width:100%;
+   max-height:280px;
+   border-radius: 10px;
+}
+.facilities-col p{
+    width:350px;
+    color:#777
+}
+.facilities-col h3{
+    font-size: 16px;
+    margin: 10px 0;
+}
+@media (max-width:700px){
+    .facilities-row{
+       flex-direction: column;
+    }
+    .facilities-header p{
+        font-size: 14px;
+    }
+}
+/* student reviews */
+.reviews{
+    margin-top: 100px;
+    overflow-x: hidden;
+}
+.reviews-header{
+    text-align: center;
+}
+.reviews-header h1{
+    font-size: 32px;
+    margin-bottom: 15px ;
+}
+.reviews-row{
+    display: flex;
+    margin-top: 50px;
+    padding: 10px 18px;
+    justify-content: center;
+}
+.reviews-col{
+    background-color: #fff3f3;
+    margin: 20px 30px;
+    flex-basis: 40%;
+    border-radius: 10px;
+}
+.rev{
+    display: flex;
+    box-sizing: border-box;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+.rev img{
+    max-width:100px;
+    border-radius: 50%;
+}
+.rev img{
+    margin: 0 25px;
+}
+.rev p{
+    margin-top: 5px;
+    color:#777;
+    line-height: 20px;
+}
+.reviews h3{
+    margin-left: 95px;
+    margin-bottom: 20px;
+}
+.stars{
+    margin-left: 95px;
+    color:#f44336;
+    margin-bottom: 20px;
+}
+@media (max-width:700px){
+    .reviews-row{
+        flex-direction: column;
+    }
+    .reviews-header h1{
+        font-size: 25px;
+        margin-bottom: 15px ;
+    }
+
+}
+/* enroll section */
+.enroll{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('banner2.jpg');
+    min-height: 30vh;
+    background-size: cover;
+    background-position: center;
+    margin: 6% 9%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    min-height: 50vh;
+    position: relative;
+}
+.enroll h1{
+    color:white;
+    text-align: center;
+    margin-bottom: 50px;
+    display: block;
+    padding-top: 77px;
+    font-size: 35px;
+}
+.enroll a{
+   text-decoration: none;
+   position: absolute;
+   color: white;
+   border: 1px solid white;
+   padding: 12px 30px;
+   top:60%;
+   left:44%
+}
+.enroll a:hover{
+        background-color:#f44336;
+        cursor: pointer;
+        border: none;
+}
+@media (max-width:700px){
+    .enroll h1{
+        font-size: 26px;
+        padding-top: 40px;
+        box-sizing: border-box;
+    }
+    .enroll a{
+       text-decoration: none;
+       position: absolute;
+       color: white;
+       border: 1px solid white;
+       padding: 15px 35px;
+       top:60%;
+       left:26%
+    }
+}
+/* footer */
+.footer{
+    text-align: center;
+     margin: 100px auto;
+    overflow: hidden;
+}
+.footer h3{
+    margin-bottom: 35px;
+}
+.footer p{
+    color:#777;
+    margin:20px auto;
+    line-height: 23px;
+    
+}
+.fa-brands{
+    margin: 0 10px;
+    color:#f44336
+}
+@media (max-width:700px){
+    .footer p{
+        font-size: 13px;
+        width:360px
+    }
+}
+/* -------about us------ */
+.sub-header{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)) , url('background.jpg');
+    max-width:100%;
+    height:70vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.sub-header .content h1{
+    padding-top: 120px;
+    font-size: 65px;
+}
+.about-row {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+}
+.about-col-1{
+    flex-basis: 40%;
+    padding: 20px 25px;
+}
+.about-col-1 h2{
+    margin-bottom: 20px;
+    line-height: 40px;
+    font-size: 35px;
+}
+.about-col-1 p{
+    margin-bottom: 20px;
+    line-height: 25px;
+    color:#777
+}
+.about-col-2{
+    overflow: hidden;
+    flex-basis:45%;
+}
+.about-col-2 img{
+    max-width:100%;
+}
+.about-col-1,.about-col-2{
+    margin: 50px 20px;
+}
+
+.about-col-1 button{
+    padding: 15px 30px;
+    background: transparent;
+    border: 1px solid #f44336;;
+    color:#f44336;
+    position: relative;
+    transition: all 0.5s ;
+ }
+ .about-col-1 button:hover{
+     background-color:#f44336;
+     cursor: pointer;
+     color:white;
+     border: none;
+ }
+ @media (max-width:700px){
+    .about-row {
+       flex-direction: column;
+    }
+    #content-h1{
+        font-size: 30px;
+    }
+ }
+ @media (min-width:700px) and (max-width:820px){
+    .about-col-2{
+        flex-basis:48%; 
+        max-height: 450px;
+        margin-top: 20%;
+    }
+ }
+ /* Courses page */
+ #facilities-id{
+    margin-top: 100px;
+ }
+ @media  (max-width:700px){
+   #h1-content{
+     font-size: 30px;
+   }
+ }
+
+ /* Blog page */
+ #certificates-h1{
+    font-size: 50px;
+ }
+  .blog{
+    margin:100px 30px;
+  }
+  .blog-row{
+    display: flex;
+    justify-content: space-evenly;
+  }
+ .blog-row-left{
+   flex-basis: 58%;
+   overflow: hidden;
+ }
+ .blog-row-left img{
+    width:100%;
+    max-height: 550px;
+ }
+ .blog-row-left h2{
+    margin: 30px 0;
+ }
+ .blog-row-left p{
+    line-height: 25px;
+    margin: 30px 0;
+    color:#777
+ }
+ .blog-row-right{
+    flex-basis: 22%;
+ }
+ .inner-post{
+    display: flex;
+    justify-content: space-between;
+ }
+ .blog-row-right h2{
+    text-align: center;
+    width:100%;
+    font-size:20px;
+    background-color: #f44336;
+    color:white;
+    padding: 10px 0;
+ }
+ .analytics,.numbers{
+    margin: 20px 10px;
+ }
+ .analytics h4,.numbers h4{
+    margin: 20px 0;
+    color:#777
+ }
+ @media (max-width:920px){
+    #certificates-h1{
+        font-size:30px
+    }
+    .blog-row-left h2{
+        font-size: 30px;
+     }
+     .blog-row{
+        flex-direction: column;
+     }
+ } 
+
+ .form{
+    border: 1px solid #f44336;
+    padding: 50px 25px;
+    margin: 100px 0;
+ }
+ .form input{
+    width: 100%;
+    margin-bottom: 20px ;
+    height:6vh;
+    outline: none;
+    border:1px solid #777;
+    background-color: #f0f0f0
+ }
+ .form textarea{
+    width:100%;
+    margin-bottom: 20px;
+    outline: none;
+    background-color: #f0f0f0;
+    height:25vh;
+ }
+ ::placeholder{
+    padding: 10px 10px;
+    border:#777
+ }
+ .form button{
+    padding: 11px 20px;
+    background: transparent;
+    border: 1px solid #f44336;
+    color:#f44336;
+    position: relative;
+    transition: all 0.5s ;
+ }
+ .form button:hover{
+     background-color:#f44336;
+     cursor: pointer;
+     color:white;
+     border: none;
+ }
+ /* contact us */
+ .location{
+    width:80%;
+    margin: 60px auto;
+ }
+ .location iframe{
+    width:100%;
+    padding: 20px 20px;
+    min-height: 65vh;
+ }
+ .loc-row{
+    display: flex;
+    margin: 50px 20px;
+ }
+ .loc-col-1{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    flex-basis: 50%;
+ }
+ .icon-inner{
+    margin:20px 20px 50px 8px;
+    font-size: 25px;
+    color:#f44336
+ }
+ .icon-inner .fa-envelope{
+    margin-top: 11px;
+ }
+ .address h5 {
+    margin: 8px 0;
+    font-size: 17px;
+    color:#777
+ }
+ .address p{
+    margin-bottom: 40px;
+    color:#777
+ }
+ @media (max-width:820px){
+    #contact-id{
+        font-size:30px
+    }
+    .loc-row{
+       flex-direction: column;
+     }
+ } 
+ .loc-col-2{
+    flex-basis: 40%;
+ }
+ .contact-form{
+    border: 1px solid #f44336;
+    margin: 20px 0;
+    padding: 25px 35px;
+ }
+ 
+  .contact-form input{
+    width: 100%;
+    margin-bottom: 20px ;
+    height:7vh;
+    outline: none;
+    border:1px solid #777;
+    background-color: #f0f0f0
+ }
+
+ .contact-form textarea{
+    width:100%;
+    margin-bottom: 20px;
+    outline: none;
+    background-color: #f0f0f0;
+    height:30vh;
+ }
+ ::placeholder{
+    padding: 10px 10px;
+    border:#777
+ }
+ 
+ .contact-form button{
+    padding: 11px 20px;
+    background: transparent;
+    border: 1px solid #f44336;
+    color:#f44336;
+    position: relative;
+    transition: all 0.5s ;
+ }
+ .contact-form button:hover{
+     background-color:#f44336;
+     cursor: pointer;
+     color:white;
+     border: none;
+ } 
+ 
